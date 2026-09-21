@@ -1,57 +1,541 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Master</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Master - Banking Mock Test</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #f5f7fb;
-            padding: 20px;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    margin: 0;
+    padding: 0;
+}
 
-        .box {
-            background: white;
-            padding: 20px;
-            max-width: 500px;
-            margin: auto;
-            border-radius: 15px;
-        }
+header {
+    background: #1565c0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        button {
-            width: 100%;
-            padding: 15px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-        }
-    </style>
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.notice {
+    background: #fff3cd;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.timer {
+    background: #d32f2f;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.question {
+    background: white;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.subject {
+    color: #1565c0;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    margin: 7px 0;
+    background: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #e3f2fd;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+#result {
+    display: none;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+
+.answer-box {
+    background: #f5f5f5;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>📚 Exam Master</h1>
-    <p>Online Mock Test & Exam Updates</p>
+<header>
+    <h1>Exam Master</h1>
+    <p>Banking Mock Test</p>
+</header>
 
-    <div class="box">
+<div class="container">
 
-        <h2>📖 Exams</h2>
+<div class="notice">
+    ⚠️ यह Practice Test है। ये questions verified previous-year questions (PYQ) नहीं हैं।
+</div>
 
-        <button>🏦 Banking</button>
-        <button>🚂 Railway</button>
-        <button>📝 SSC</button>
-        <button>📮 GDS</button>
-        <button>🏛️ State Exams</button>
-        <button>📚 General Competition</button>
+<div class="timer">
+    ⏱️ Time Left: <span id="timer">20:00</span>
+</div>
 
-        <h2>🔴 Live Test</h2>
-        <button>Join Live Test</button>
+<form id="quizForm">
 
-    </div>
+<!-- QUESTION 1 -->
+<div class="question">
+<div class="subject">Maths - Question 1</div>
+<p>25% of 240 कितना होगा?</p>
+
+<label class="option"><input type="radio" name="q1" value="0"> 40</label>
+<label class="option"><input type="radio" name="q1" value="1"> 60</label>
+<label class="option"><input type="radio" name="q1" value="2"> 80</label>
+<label class="option"><input type="radio" name="q1" value="3"> 100</label>
+</div>
+
+<!-- QUESTION 2 -->
+<div class="question">
+<div class="subject">Maths - Question 2</div>
+<p>एक वस्तु का CP ₹800 और SP ₹920 है। Profit percentage कितना है?</p>
+
+<label class="option"><input type="radio" name="q2" value="0"> 10%</label>
+<label class="option"><input type="radio" name="q2" value="1"> 12%</label>
+<label class="option"><input type="radio" name="q2" value="2"> 15%</label>
+<label class="option"><input type="radio" name="q2" value="3"> 20%</label>
+</div>
+
+<!-- QUESTION 3 -->
+<div class="question">
+<div class="subject">Maths - Question 3</div>
+<p>₹5000 पर 8% प्रति वर्ष की दर से 2 वर्ष का Simple Interest कितना होगा?</p>
+
+<label class="option"><input type="radio" name="q3" value="0"> ₹600</label>
+<label class="option"><input type="radio" name="q3" value="1"> ₹800</label>
+<label class="option"><input type="radio" name="q3" value="2"> ₹900</label>
+<label class="option"><input type="radio" name="q3" value="3"> ₹1000</label>
+</div>
+
+<!-- QUESTION 4 -->
+<div class="question">
+<div class="subject">Maths - Question 4</div>
+<p>एक राशि को 3:5 के अनुपात में बाँटा गया। कुल राशि 64 है। छोटा हिस्सा कितना होगा?</p>
+
+<label class="option"><input type="radio" name="q4" value="0"> 16</label>
+<label class="option"><input type="radio" name="q4" value="1"> 24</label>
+<label class="option"><input type="radio" name="q4" value="2"> 32</label>
+<label class="option"><input type="radio" name="q4" value="3"> 40</label>
+</div>
+
+<!-- QUESTION 5 -->
+<div class="question">
+<div class="subject">Maths - Question 5</div>
+<p>350 का 40% कितना है?</p>
+
+<label class="option"><input type="radio" name="q5" value="0"> 120</label>
+<label class="option"><input type="radio" name="q5" value="1"> 130</label>
+<label class="option"><input type="radio" name="q5" value="2"> 140</label>
+<label class="option"><input type="radio" name="q5" value="3"> 150</label>
+</div>
+
+<!-- QUESTION 6 -->
+<div class="question">
+<div class="subject">Reasoning - Question 6</div>
+<p>Series पूरी करें: 2, 6, 12, 20, 30, ?</p>
+
+<label class="option"><input type="radio" name="q6" value="0"> 36</label>
+<label class="option"><input type="radio" name="q6" value="1"> 40</label>
+<label class="option"><input type="radio" name="q6" value="2"> 42</label>
+<label class="option"><input type="radio" name="q6" value="3"> 44</label>
+</div>
+
+<!-- QUESTION 7 -->
+<div class="question">
+<div class="subject">Reasoning - Question 7</div>
+<p>यदि CAT को DBU लिखा जाता है, तो DOG को कैसे लिखा जाएगा?</p>
+
+<label class="option"><input type="radio" name="q7" value="0"> EPH</label>
+<label class="option"><input type="radio" name="q7" value="1"> FQI</label>
+<label class="option"><input type="radio" name="q7" value="2"> DPH</label>
+<label class="option"><input type="radio" name="q7" value="3"> EOG</label>
+</div>
+
+<!-- QUESTION 8 -->
+<div class="question">
+<div class="subject">Reasoning - Question 8</div>
+<p>एक व्यक्ति उत्तर की ओर 10 मीटर चलता है, फिर दाएँ मुड़कर 10 मीटर चलता है। अब वह शुरुआती स्थान से किस दिशा में है?</p>
+
+<label class="option"><input type="radio" name="q8" value="0"> उत्तर-पश्चिम</label>
+<label class="option"><input type="radio" name="q8" value="1"> उत्तर-पूर्व</label>
+<label class="option"><input type="radio" name="q8" value="2"> दक्षिण-पश्चिम</label>
+<label class="option"><input type="radio" name="q8" value="3"> दक्षिण-पूर्व</label>
+</div>
+
+<!-- QUESTION 9 -->
+<div class="question">
+<div class="subject">Reasoning - Question 9</div>
+<p>निम्न में से अलग संख्या कौन सी है?</p>
+
+<label class="option"><input type="radio" name="q9" value="0"> 16</label>
+<label class="option"><input type="radio" name="q9" value="1"> 25</label>
+<label class="option"><input type="radio" name="q9" value="2"> 36</label>
+<label class="option"><input type="radio" name="q9" value="3"> 63</label>
+</div>
+
+<!-- QUESTION 10 -->
+<div class="question">
+<div class="subject">Reasoning - Question 10</div>
+<p>यदि सभी Books, Papers हैं और सभी Papers, Files हैं, तो Books क्या हैं?</p>
+
+<label class="option"><input type="radio" name="q10" value="0"> Files</label>
+<label class="option"><input type="radio" name="q10" value="1"> Pens</label>
+<label class="option"><input type="radio" name="q10" value="2"> Tables</label>
+<label class="option"><input type="radio" name="q10" value="3"> कोई नहीं</label>
+</div>
+
+<!-- QUESTION 11 -->
+<div class="question">
+<div class="subject">English - Question 11</div>
+<p>He ___ to the bank every Monday.</p>
+
+<label class="option"><input type="radio" name="q11" value="0"> go</label>
+<label class="option"><input type="radio" name="q11" value="1"> goes</label>
+<label class="option"><input type="radio" name="q11" value="2"> going</label>
+<label class="option"><input type="radio" name="q11" value="3"> gone</label>
+</div>
+
+<!-- QUESTION 12 -->
+<div class="question">
+<div class="subject">English - Question 12</div>
+<p>Synonym of "Rapid" is:</p>
+
+<label class="option"><input type="radio" name="q12" value="0"> Slow</label>
+<label class="option"><input type="radio" name="q12" value="1"> Fast</label>
+<label class="option"><input type="radio" name="q12" value="2"> Weak</label>
+<label class="option"><input type="radio" name="q12" value="3"> Late</label>
+</div>
+
+<!-- QUESTION 13 -->
+<div class="question">
+<div class="subject">English - Question 13</div>
+<p>Antonym of "Ancient" is:</p>
+
+<label class="option"><input type="radio" name="q13" value="0"> Old</label>
+<label class="option"><input type="radio" name="q13" value="1"> Modern</label>
+<label class="option"><input type="radio" name="q13" value="2"> Historic</label>
+<label class="option"><input type="radio" name="q13" value="3"> Past</label>
+</div>
+
+<!-- QUESTION 14 -->
+<div class="question">
+<div class="subject">English - Question 14</div>
+<p>सही sentence चुनिए:</p>
+
+<label class="option"><input type="radio" name="q14" value="0"> She have completed her work.</label>
+<label class="option"><input type="radio" name="q14" value="1"> She has completed her work.</label>
+<label class="option"><input type="radio" name="q14" value="2"> She completing her work.</label>
+<label class="option"><input type="radio" name="q14" value="3"> She complete her work.</label>
+</div>
+
+<!-- QUESTION 15 -->
+<div class="question">
+<div class="subject">English - Question 15</div>
+<p>The manager is responsible ___ the branch.</p>
+
+<label class="option"><input type="radio" name="q15" value="0"> at</label>
+<label class="option"><input type="radio" name="q15" value="1"> on</label>
+<label class="option"><input type="radio" name="q15" value="2"> for</label>
+<label class="option"><input type="radio" name="q15" value="3"> by</label>
+</div>
+
+<!-- QUESTION 16 -->
+<div class="question">
+<div class="subject">Banking Awareness - Question 16</div>
+<p>RBI का full form क्या है?</p>
+
+<label class="option"><input type="radio" name="q16" value="0"> Reserve Bank of India</label>
+<label class="option"><input type="radio" name="q16" value="1"> Royal Bank of India</label>
+<label class="option"><input type="radio" name="q16" value="2"> Rural Bank of India</label>
+<label class="option"><input type="radio" name="q16" value="3"> Regional Bank of India</label>
+</div>
+
+<!-- QUESTION 17 -->
+<div class="question">
+<div class="subject">Banking Awareness - Question 17</div>
+<p>KYC का full form क्या है?</p>
+
+<label class="option"><input type="radio" name="q17" value="0"> Know Your Customer</label>
+<label class="option"><input type="radio" name="q17" value="1"> Keep Your Cash</label>
+<label class="option"><input type="radio" name="q17" value="2"> Know Your Credit</label>
+<label class="option"><input type="radio" name="q17" value="3"> Keep Your Customer</label>
+</div>
+
+<!-- QUESTION 18 -->
+<div class="question">
+<div class="subject">Banking Awareness - Question 18</div>
+<p>NEFT का full form क्या है?</p>
+
+<label class="option"><input type="radio" name="q18" value="0"> National Electronic Funds Transfer</label>
+<label class="option"><input type="radio" name="q18" value="1"> National Easy Funds Transfer</label>
+<label class="option"><input type="radio" name="q18" value="2"> New Electronic Funds Transfer</label>
+<label class="option"><input type="radio" name="q18" value="3"> National Exchange Funds Transfer</label>
+</div>
+
+<!-- QUESTION 19 -->
+<div class="question">
+<div class="subject">Banking Awareness - Question 19</div>
+<p>CRR का full form क्या है?</p>
+
+<label class="option"><input type="radio" name="q19" value="0"> Cash Reserve Ratio</label>
+<label class="option"><input type="radio" name="q19" value="1"> Credit Reserve Ratio</label>
+<label class="option"><input type="radio" name="q19" value="2"> Cash Rate Reserve</label>
+<label class="option"><input type="radio" name="q19" value="3"> Credit Rate Ratio</label>
+</div>
+
+<!-- QUESTION 20 -->
+<div class="question">
+<div class="subject">Banking Awareness - Question 20</div>
+<p>NABARD मुख्य रूप से किस क्षेत्र से संबंधित है?</p>
+
+<label class="option"><input type="radio" name="q20" value="0"> Agriculture and Rural Development</label>
+<label class="option"><input type="radio" name="q20" value="1"> Space Research</label>
+<label class="option"><input type="radio" name="q20" value="2"> Railway Transport</label>
+<label class="option"><input type="radio" name="q20" value="3"> Defence</label>
+</div>
+
+<button type="button" onclick="submitTest()">Submit Test</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+const correctAnswers = [
+1,  // Q1
+2,  // Q2
+1,  // Q3
+1,  // Q4
+2,  // Q5
+2,  // Q6
+0,  // Q7
+1,  // Q8
+3,  // Q9
+0,  // Q10
+1,  // Q11
+1,  // Q12
+1,  // Q13
+1,  // Q14
+2,  // Q15
+0,  // Q16
+0,  // Q17
+0,  // Q18
+0,  // Q19
+0   // Q20
+];
+
+const explanations = [
+"240 × 25% = 60.",
+"Profit = 920 - 800 = 120. Profit% = 120/800 × 100 = 15%.",
+"SI = P × R × T / 100 = 5000 × 8 × 2 / 100 = ₹800.",
+"3 + 5 = 8. 64 ÷ 8 = 8. छोटा हिस्सा = 3 × 8 = 24.",
+"350 × 40/100 = 140.",
+"अंतर 4, 6, 8, 10 है; अगला अंतर 12 होगा. इसलिए 42.",
+"हर अक्षर में +1 किया गया है: D-O-G → E-P-H.",
+"उत्तर की ओर जाने के बाद दाएँ मुड़ने पर पूर्व दिशा होती है, इसलिए उत्तर-पूर्व.",
+"16, 25, 36 और 49 perfect squares हैं, लेकिन 63 नहीं.",
+"यदि Books ⊂ Papers और Papers ⊂ Files, तो Books भी Files हैं.",
+"He के साथ goes आएगा.",
+"Rapid का synonym Fast है.",
+"Ancient का antonym Modern है.",
+"सही sentence: She has completed her work.",
+"Responsible के साथ 'for' आता है.",
+"RBI = Reserve Bank of India.",
+"KYC = Know Your Customer.",
+"NEFT = National Electronic Funds Transfer.",
+"CRR = Cash Reserve Ratio.",
+"NABARD agriculture और rural development से संबंधित है."
+];
+
+let timeLeft = 20 * 60;
+let submitted = false;
+
+const timer = setInterval(function() {
+
+    if (submitted) {
+        clearInterval(timer);
+        return;
+    }
+
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    document.getElementById("timer").textContent =
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        submitTest();
+        return;
+    }
+
+    timeLeft--;
+
+}, 1000);
+
+
+function submitTest() {
+
+    if (submitted) return;
+
+    submitted = true;
+    clearInterval(timer);
+
+    let score = 0;
+    let wrong = 0;
+    let unattempted = 0;
+
+    let reviewHTML = "<h2>Question Review</h2>";
+
+    for (let i = 1; i <= 20; i++) {
+
+        let selected = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        let questionNumber = i;
+        let correct = correctAnswers[i - 1];
+
+        if (!selected) {
+
+            unattempted++;
+
+            reviewHTML += `
+            <div class="answer-box">
+            <b>Question ${questionNumber}</b><br>
+            <span class="wrong">⭕ Unattempted</span><br>
+            Correct Answer: <b>${getOptionText(i, correct)}</b><br>
+            Explanation: ${explanations[i - 1]}
+            </div>
+            `;
+
+        } else if (parseInt(selected.value) === correct) {
+
+            score++;
+            
+            reviewHTML += `
+            <div class="answer-box">
+            <b>Question ${questionNumber}</b><br>
+            <span class="correct">✅ Correct</span><br>
+            Your Answer: <b>${getOptionText(i, parseInt(selected.value))}</b><br>
+            Correct Answer: <b>${getOptionText(i, correct)}</b><br>
+            Explanation: ${explanations[i - 1]}
+            </div>
+            `;
+
+        } else {
+
+            wrong++;
+
+            reviewHTML += `
+            <div class="answer-box">
+            <b>Question ${questionNumber}</b><br>
+            <span class="wrong">❌ Wrong</span><br>
+            Your Answer: ${getOptionText(i, parseInt(selected.value))}<br>
+            Correct Answer: <b>${getOptionText(i, correct)}</b><br>
+            Explanation: ${explanations[i - 1]}
+            </div>
+            `;
+        }
+    }
+
+    document.getElementById("quizForm").style.display = "none";
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").innerHTML = `
+        <h2>🎉 Test Result</h2>
+        <h3>Score: ${score} / 20</h3>
+        <p>✅ Correct: ${score}</p>
+        <p>❌ Wrong: ${wrong}</p>
+        <p>⭕ Unattempted: ${unattempted}</p>
+        <hr>
+        ${reviewHTML}
+        <button onclick="location.reload()">Try Again</button>
+    `;
+
+    window.scrollTo(0, 0);
+}
+
+
+function getOptionText(questionNumber, optionNumber) {
+
+    const question = document.querySelectorAll(
+        'input[name="q' + questionNumber + '"]'
+    );
+
+    if (question[optionNumber]) {
+        return question[optionNumber].parentElement.textContent.trim();
+    }
+
+    return "";
+}
+
+</script>
 
 </body>
 </html>
