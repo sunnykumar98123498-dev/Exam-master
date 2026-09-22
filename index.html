@@ -126,7 +126,7 @@ button:hover {
 <div class="banking-menu">
     <h2>🏦 Banking Exams / बैंकिंग परीक्षाएँ</h2>
 
-    <button>IBPS PO / आईबीपीएस पीओ</button>
+    <button onclick="startExam('IBPS PO / आईबीपीएस पीओ')">IBPS PO / आईबीपीएस पीओ</button>
     <button>IBPS Clerk / आईबीपीएस क्लर्क</button>
     <button>SBI PO / एसबीआई पीओ</button>
     <button>SBI Clerk / एसबीआई क्लर्क</button>
@@ -544,7 +544,16 @@ function getOptionText(questionNumber, optionNumber) {
 
     return "";
 }
+function startExam(examName) {
+    document.querySelector(".banking-menu").style.display = "none";
 
+    document.querySelector("header p").textContent =
+        examName + " - Mock Test / मॉक टेस्ट";
+
+    document.getElementById("quizForm").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
 </script>
 
 </body>
